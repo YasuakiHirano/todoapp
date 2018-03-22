@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <%- include('_head'); %>
+  <body>
+    <%- include('_header'); %>
+    <%- include('_message'); %>
+    <div class="container" style="margin-top:20px;height:700px;">
+      <div class="row justify-content-md-center">
+        <div class="col-md-8">
+           <div class="form-group">
+            <label for="user_name">ユーザー</label>
+            <input type="text" id="user_name" class="form-control" />
+           </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-8">
+           <div class="form-group">
+            <label for="contents">タスク</label>
+            <input type="text" id="contents" class="form-control" />
+           </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="btn_add">&nbsp;</label>
+            <button id="btn_add" type="button" class="form-control btn btn-primary">追加</button>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-10">
+          <div class="card">
+            <div class="card-header">
+              タスク一覧
+            </div>
+            <ul id="task_list" class="list-group list-group-flush">
+            <% if(task_list == null){  %>
+              <li class="list-group-item">
+                ユーザーを入力して、タスクを追加してください。
+              </li> 
+            <% } %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "todoapp",
+  "description": "",
+  "main": "",
+  "authors": [
+    "YasuakiHirano <yasuakihappy2@yahoo.co.jp>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap4": "^4.0.0",
+    "underscore": "^1.8.3"
+  }
+}

@@ -27,7 +27,12 @@ $(function(){
     let list_tag = '';
     for(let i = 0; i < tasks.length; i++) {
       list_tag += 
-        '<li class="list-group-item">'+getDate(tasks[i].create_date)+'<br />'+tasks[i].content+
+        '<li class="list-group-item" style="padding-left:35px;">'+
+          '<label class="form-check-label">'+
+          '<input class="form-check-input" type="checkbox" value="" style="margin-top: 20px;margin-left: -25px;">'+
+          getDate(tasks[i].create_date)+'<br />'+
+          tasks[i].content+
+          '</label>'+
           '<button type="button" class="close close_task_list"  data-id="'+tasks[i]._id+'">'+
               '<span>&times;</span>'+
           '</button>'+
@@ -59,6 +64,15 @@ $(function(){
   // 閉じるボタン押下時
   $(document).on('click', '.close', function () {
     $(this).parent().slideUp();
+  });
+
+  // 取り消し線
+  $(document).on('change', '.form-check-input', function () {
+    if($(this).prop('checked')){
+      $(this).parent().attr('style', 'text-decoration: line-through;');
+    } else {
+      $(this).parent().attr('style', '');
+    }
   });
 
   // ユーザー名変更 一覧取得
